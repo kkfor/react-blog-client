@@ -37,6 +37,7 @@ const cssRegex = /\.css$/;
 const cssModuleRegex = /\.module\.css$/;
 const sassRegex = /\.(scss|sass)$/;
 const sassModuleRegex = /\.module\.(scss|sass)$/;
+const sassGlobalDir = path.resolve(__dirname, '../src/styles')
 
 // common function to get style loaders
 const getStyleLoaders = (cssOptions, preProcessor) => {
@@ -297,13 +298,14 @@ module.exports = {
           // extensions .module.scss or .module.sass
           {
             test: sassRegex,
-            exclude: sassModuleRegex,
+            include: sassGlobalDir,
             use: getStyleLoaders({ importLoaders: 2 }, 'sass-loader'),
           },
           // Adds support for CSS Modules, but using SASS
           // using the extension .module.scss or .module.sass
           {
             test: sassModuleRegex,
+            exclude: sassGlobalDir,
             use: getStyleLoaders(
               {
                 importLoaders: 2,

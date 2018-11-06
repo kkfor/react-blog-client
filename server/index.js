@@ -1,1 +1,4 @@
-require('app.js')
+require('./ignore')()
+require('babel-register')
+require('babel-polyfill')
+require('./app.js')
