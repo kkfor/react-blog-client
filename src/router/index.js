@@ -1,5 +1,5 @@
-import Home from '@/views/home'
-import Detail from '@/views/detail'
+import Home from '@/views/home/index.jsx'
+import Detail from '@/views/detail/index.jsx'
 
 const route = [
   {

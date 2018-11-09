@@ -1,19 +1,16 @@
 import React, { Component, Fragment } from 'react'
-import Header from '@/layout/header'
-import Main from '@/layout/main'
-import Footer from '@/layout/footer'
-import {BrowserRouter as Router } from 'react-router-dom'
+import Header from '@/layout/header/index.jsx'
+import Main from '@/layout/main/index.jsx'
+import Footer from '@/layout/footer/index.jsx'
 
 class App extends Component {
   render() {
     return (
-      <Router>
-        <Fragment>
-          <Header />
-          <Main />
-          <Footer />
-        </Fragment>
-      </Router>
+      <Fragment>
+        <Header />
+        <Main />
+        <Footer />
+      </Fragment>
     )
   }
 }

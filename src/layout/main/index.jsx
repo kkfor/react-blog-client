@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import styles from './index.scss'
 import router from '@/router'
 import { Route, Switch } from 'react-router-dom'
-import Aside from '@/layout/aside'
+import Aside from '@/layout/aside/index.jsx'
 
 class Main extends Component {
   render() {
